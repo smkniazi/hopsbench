@@ -2,15 +2,15 @@ dependencies:
   - recipe: hopsbench::install
     global:
       - hops::install
-  - recipe: hopsbench::master
+  - recipe: hopsbench::hopsfs-cloud
     global:
       - hopsbench::install
       - hops::client
   - recipe: hopsbench::slave
     global:
-      - hopsbench::master
+      - hopsbench::hopsfs-cloud
       - hopsbench::install
   - recipe: hopsbench::nn
     global:
-      - hopsbench::master
+      - hopsbench::hopsfs-cloud
       - hopsbench::install
